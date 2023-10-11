@@ -29,13 +29,6 @@ body {
   background-color: rgb(11, 10, 7);
 }
 
-.perritos {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
 .bg {
   background-image: url("https://placedog.net/800/640?id=213");
   background-repeat: no-repeat;
