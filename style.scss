@@ -1,0 +1,145 @@
+body {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+$bgColorA: gray;
+$bgColorB: black;
+
+@mixin basePropertiesParent($height, $bgColor, $wDiv, $bgColorDiv){
+  height: $height;
+  background-color: $bgColor;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  div {
+    height: 100%;
+    width: $wDiv;
+    background-color: $bgColorDiv;
+  }
+}
+
+.boxes{
+  @include basePropertiesParent(20px,$bgColorA, 100px, pink);
+}
+
+.circles{
+  @include basePropertiesParent(40px,$bgColorB,200px,orange);
+}
+
+.perritos{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.bg{
+  background: {
+    image: url("https://placedog.net/800/640?id=213");
+    repeat: no-repeat;
+    size: cover;
+    position: center;
+    color: pink;
+    blend-mode: soft-light;
+  }
+  height: 400px;
+  position: relative;
+  .title{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: red;
+    h1, p {
+      margin: 0;
+      display: inline;
+    }
+  }
+}
+
+.bg2{
+  background-image: url("https://placedog.net/800/640?id=213");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  background-color: pink;
+  background-blend-mode: soft-light;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  .title{
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    h1, p {
+      margin: 0;
+      display: inline;
+    }
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar{
+  background-color: black;
+  height: 100vh; //viewport width instead of %
+  width: 200px;
+  position: fixed;
+  left: -160px;
+  top: 0px;
+  transition: all 200ms;
+  &:hover{
+    left: 0px;
+  }
+  @media screen and (min-width: 600px) {
+    width: 100vw;
+    height: 100px;
+    left: 0px;
+  }
+  ul{
+    @media screen and (min-width: 600px) {
+    width: 100vw;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: space-between;
+    }
+    li{
+      width: 100%;
+      background-color: rgb(37, 37, 37);
+      padding: 20px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin-bottom: 10px;
+      a{
+        color: white;
+        text: {
+          decoration: none;
+          transform: uppercase;
+        }
+        font: {
+          family: Arial, sans-serif;
+          size: 20px;
+          weight: bolder;
+        }
+      }
+    }
+  }
+}

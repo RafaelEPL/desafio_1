@@ -1,0 +1,143 @@
+body {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.boxes {
+  height: 20px;
+  background-color: rgb(61, 59, 59);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.boxes div {
+  height: 100%;
+  width: 100px;
+  background-color: rgb(0, 0, 0);
+}
+
+.circles {
+  height: 40px;
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.circles div {
+  height: 100%;
+  width: 200px;
+  background-color: rgb(11, 10, 7);
+}
+
+.perritos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.bg {
+  background-image: url("https://placedog.net/800/640?id=213");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: rgb(0, 0, 0);
+  background-blend-mode: soft-light;
+  height: 400px;
+  position: relative;
+}
+.bg .title {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background-color: black;
+}
+.bg .title h1, .bg .title p {
+  margin: 0;
+  display: inline;
+}
+
+.bg2 {
+  background-color: black;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  background-color: rgb(0, 0, 0);
+  background-blend-mode: soft-light;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+.bg2 .title {
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.bg2 .title h1, .bg2 .title p {
+  margin: 0;
+  display: inline;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar {
+  background-color: black;
+  height: 100vh;
+  width: 200px;
+  position: fixed;
+  left: -160px;
+  top: 0px;
+  transition: all 200ms;
+}
+.sidebar:hover {
+  left: 0px;
+}
+@media screen and (min-width: 600px) {
+  .sidebar {
+    width: 100vw;
+    height: 100px;
+    left: 0px;
+  }
+}
+@media screen and (min-width: 600px) {
+  .sidebar ul {
+    width: 100vw;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: space-between;
+  }
+}
+.sidebar ul li {
+  width: 100%;
+  background-color: rgb(37, 37, 37);
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  font-weight: bolder;
+}/*# sourceMappingURL=style.css.map */
